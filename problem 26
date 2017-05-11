@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main(){
+  int i,value,max,counter,max2,x;
+  max=0;
+  for (i=7;i<1000;i++){
+    counter=0;
+    value = 10%i;
+    x=1000;
+    while (value != 1 && x>0){
+      value = value *10;
+      value = value % i;
+      counter++;
+      x--;
+    }
+    if (counter>max && x>1){
+      max=counter;
+      max2=i;
+    }
+  }
+  printf("%d\n",max2);
+return 0;
+}
