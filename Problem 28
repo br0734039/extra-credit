@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+	long sum=1;
+	int mult =0;
+	int add=1;
+	for (int col=0;col<500;col++)
+	{
+		mult++;
+	for (int times = 0;times<4;times++)
+		
+	{
+	
+		add += 2*mult;
+	    
+		sum+=add;
+		}
+	}
+	cout<<sum;
+	getchar();
+	return 0;
+}
