@@ -1,0 +1,32 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+int main(){
+	string temp, tempor;
+	int temporNum, tempNum = 0;
+	
+	for (int i=100;i<1000;i++){
+		if(temporNum>tempNum) tempNum = temporNum;
+			
+		for(int j=100;j<1000;j++){
+			int tempo = i*j;
+			
+			ostringstream convert;
+			convert << tempo;
+			
+			temp = convert.str();
+			
+			if((temp[0] == temp[5]) && (temp[1] == temp[4]) && (temp[2]==temp[3])){
+				tempor = temp;	
+				istringstream(tempor) >> temporNum;
+			}		
+		}
+	}
+	
+	cout << "Largest palindrome made from the product of two 3-digit numbers: " << tempNum << endl;
+	
+	return 0;
+}
