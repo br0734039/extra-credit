@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+  long int primes[10001];
+  int counted=1,i;
+  primes[0]=2;
+
+  for(i=3; counted<10001;i++ ){
+     for(int j=0; j<counted; j++){
+        if(i%primes[j]==0){
+            break;
+        }
+        else if(j==counted-1){
+            primes[j+1]=i;
+
+            counted++;
+            break;}}}
+
+cout<<primes[10000]<<endl;
+return 0;
+}
